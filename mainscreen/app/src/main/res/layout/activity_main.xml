@@ -7,9 +7,11 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/AppNametv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go Go Doggo"
+        android:text="@string/app_name"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -17,26 +19,61 @@
         app:layout_constraintVertical_bias="0.157" />
 
     <Button
-        android:id="@+id/ShelterSignUp"
+        android:id="@+id/ShelterSignInButton"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="270dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="ShelterSignOnButton.java"
-        android:text="Shelter SignUp"
+        android:text="@string/shelterIn"
         android:textColor="@color/colorPrimary"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="270dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/HumanSignUp"
+        android:id="@+id/HumanSignInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="270dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Human SignUp"
+        android:text="@string/huIn"
         android:textColor="@color/colorPrimary"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="270dp" />
+        app:layout_constraintStart_toEndOf="@+id/ShelterSignInButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ShelterSignUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="ShelterSignOnButton.java"
+        android:text="@string/shelterUp"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShelterSignInButton" />
+
+    <Button
+        android:id="@+id/HumanSignUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/huUp"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/ShelterSignUpButton"
+        app:layout_constraintTop_toBottomOf="@+id/HumanSignInButton" />
 
 </android.support.constraint.ConstraintLayout>

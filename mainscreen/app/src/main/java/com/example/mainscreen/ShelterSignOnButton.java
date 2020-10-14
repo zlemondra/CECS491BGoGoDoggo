@@ -1,3 +1,4 @@
+/*
 package com.example.mainscreen;
 
 import android.app.Activity;
@@ -22,3 +23,4 @@ public class ShelterSignOnButton extends Activity implements View.OnClickListene
         startActivity(intent);
     }
 }
+ */
