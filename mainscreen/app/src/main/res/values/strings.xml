@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Main Screen</string>
+    <string name="app_name">GoGoDoggo</string>
+    <string name="shelterIn">Shelter Sign In</string>
+    <string name="huIn">Human Sign In</string>
+    <string name="shelterUp">Shelter Sign Up</string>
+    <string name="huUp">Human Sign Up</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="password">Password</string>
+    <string name="re_type_password">Re-Type Password</string>
+    <string name="email">E-Mail Address</string>
+    <string name="submit">Submit</string>
 </resources>
