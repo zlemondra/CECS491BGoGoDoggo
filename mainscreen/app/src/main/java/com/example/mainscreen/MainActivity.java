@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
         btnShelterIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+             //   intent = new Intent(MainActivity.this, ShelterUserSignInActivity.class);
             }//End of method onClick
         });//End of btnViewList.setOnClickListener
 
         btnShelterUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+               // intent = new Intent(MainActivity.this, ShelterUserSignUpActivity.class);
                 startActivity(intent);
             }//End of method onClick
         });//End of btnShelterUp.setOnClickListener
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         btnHuIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            // intent = new Intent(MainActivity.this, HumanUserSignInActivity.class);
                 startActivity(intent);
             }//End of method onClick
         });//End of btnHuIn.setOnClickListener
