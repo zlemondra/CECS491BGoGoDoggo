@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Variable Initializations
-        btnShelterIn = findViewById(R.id.ShelterSignInButton);
+        //btnShelterIn = findViewById(R.id.ShelterSignInButton);
         btnShelterUp = findViewById(R.id.ShelterSignUpButton);
         btnHuIn = findViewById(R.id.HumanSignInButton);
         btnHuUp = findViewById(R.id.HumanSignUpButton);
@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
             ggdDatabase.execSQL("INSERT INTO HumanUsers VALUES('admin', 'admin', 'amulkey21@yahoo.com', 'admin', '0');");
         }//End of if statement to initially populate the table HumanUsers
 
-        btnShelterIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+      //  btnShelterIn.setOnClickListener(new View.OnClickListener() {
+           // @Override
+           // public void onClick(View v) {
              //   intent = new Intent(MainActivity.this, ShelterUserSignInActivity.class);
-            }//End of method onClick
-        });//End of btnViewList.setOnClickListener
+         //   }//End of method onClick
+        //});//End of btnViewList.setOnClickListener
 
         btnShelterUp.setOnClickListener(new View.OnClickListener() {
             @Override
