@@ -36,11 +36,13 @@
         android:layout_height="72dp"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
-        android:background="@drawable/HomeScreenButtons"
-        android:textColor="@color/colorPrimary"
-        android:visibility="visible"
+        android:background="@color/colorPrimary"
+        android:text="Shelter"
+        android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="411dp" />
+        tools:background="@drawable/HomeScreenButtons"
+        tools:layout_editor_absoluteY="411dp"
+        tools:textColor="@" />
 
     <Button
         android:id="@+id/HumanSignUpButton"
