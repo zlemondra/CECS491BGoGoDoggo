@@ -6,71 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/AppNametv"
+    <ImageView
+        android:id="@+id/iv_app_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="137dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="63dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:srcCompat="@drawable/new_logo" />
 
     <Button
-        android:id="@+id/HumanSignInButton"
+        android:id="@+id/btn_sign_in"
         android:layout_width="231dp"
         android:layout_height="73dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
         android:layout_marginTop="292dp"
         android:background="@color/colorPrimary"
-        android:text="Login "
+        android:text="@string/sign_in"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="105dp" />
-
-    <Button
-        android:id="@+id/ShelterSignUpButton"
-        android:layout_width="129dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:background="@color/colorPrimary"
-        android:text="Shelter"
-        android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:background="@drawable/HomeScreenButtons"
-        tools:layout_editor_absoluteY="411dp"
-        tools:textColor="@" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/HumanSignUpButton"
-        android:layout_width="128dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/HumanSignUpButtons"
-        android:textColor="@color/colorPrimary"
+        android:id="@+id/btn_sign_up"
+        android:layout_width="231dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
         android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/ShelterSignUpButton"
-        app:layout_constraintTop_toBottomOf="@+id/HumanSignInButton" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner_user_type"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/new dog transparent"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="58dp" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="137dp"
-        app:srcCompat="@drawable/newlogo"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="63dp" />
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
 </android.support.constraint.ConstraintLayout>
