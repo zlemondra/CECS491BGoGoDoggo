@@ -10,7 +10,6 @@
         android:id="@+id/AppNametv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -19,61 +18,59 @@
         app:layout_constraintVertical_bias="0.157" />
 
     <Button
-        android:id="@+id/ShelterSignInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="270dp"
-        android:background="@color/colorPrimaryDark"
-        android:onClick="ShelterSignOnButton.java"
-        android:text="@string/shelterIn"
-        android:textColor="@color/colorPrimary"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/HumanSignInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginLeft="128dp"
-        android:layout_marginTop="270dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/huIn"
-        android:textColor="@color/colorPrimary"
+        android:layout_width="231dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="292dp"
+        android:background="@color/colorPrimary"
+        android:text="Login "
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
         android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/ShelterSignInButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="105dp" />
 
     <Button
         android:id="@+id/ShelterSignUpButton"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorPrimaryDark"
-        android:onClick="ShelterSignOnButton.java"
-        android:text="@string/shelterUp"
-        android:textColor="@color/colorPrimary"
-        android:visibility="visible"
+        android:layout_width="129dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:background="@color/colorPrimary"
+        android:text="Shelter"
+        android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ShelterSignInButton" />
+        tools:background="@drawable/HomeScreenButtons"
+        tools:layout_editor_absoluteY="411dp"
+        tools:textColor="@" />
 
     <Button
         android:id="@+id/HumanSignUpButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginLeft="128dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/huUp"
+        android:layout_width="128dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/HumanSignUpButtons"
         android:textColor="@color/colorPrimary"
         android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/ShelterSignUpButton"
         app:layout_constraintTop_toBottomOf="@+id/HumanSignInButton" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/new dog transparent"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="137dp"
+        app:srcCompat="@drawable/newlogo"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="63dp" />
 
 </android.support.constraint.ConstraintLayout>

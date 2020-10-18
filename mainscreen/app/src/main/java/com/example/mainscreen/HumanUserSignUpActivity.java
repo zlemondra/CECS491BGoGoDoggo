@@ -14,7 +14,7 @@ public class HumanUserSignUpActivity extends AppCompatActivity {
     Button btnSubmit;
     Cursor cursor;
     SQLiteDatabase ggdDatabase;
-    \EditText etFirst, etLast, etPassword, etRPassword, etEmail;
+    EditText etFirst, etLast, etPassword, etRPassword, etEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
