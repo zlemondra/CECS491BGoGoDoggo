@@ -6,14 +6,23 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     //Variable Declarations
     Intent intent;
     Bundle bundle;
     Cursor cursor;
-    Button btnShelterIn, btnShelterUp, btnHuIn, btnHuUp;
+    Button btnSignIn, btnSignUp;
+    Spinner spinnerUserType;
+    int userChoice = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +30,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Variable Initializations
-        //btnShelterIn = findViewById(R.id.ShelterSignInButton);
-        btnShelterUp = findViewById(R.id.ShelterSignUpButton);
-        btnHuIn = findViewById(R.id.HumanSignInButton);
-        btnHuUp = findViewById(R.id.HumanSignUpButton);
+        btnSignIn = (Button) findViewById(R.id.btn_sign_in);
+        btnSignUp = (Button) findViewById(R.id.btn_sign_up);
+        spinnerUserType = (Spinner) findViewById(R.id.spinner_user_type);
+        spinnerUserType.setOnItemSelectedListener(this);
+        List<String> userTypes = new ArrayList<String>();
+        userTypes.add("Please select a user type");
+        userTypes.add("Human User");
+        userTypes.add("Shelter");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, userTypes);    //for the spinner
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); //for the spinner
+        spinnerUserType.setAdapter(dataAdapter);    //for the spinner
+
 
         //Create a database to hold the tables
         SQLiteDatabase ggdDatabase = openOrCreateDatabase("ggd_Database", MODE_PRIVATE, null);
@@ -36,36 +53,54 @@ public class MainActivity extends AppCompatActivity {
             ggdDatabase.execSQL("INSERT INTO HumanUsers VALUES('admin', 'admin', 'amulkey21@yahoo.com', 'admin', '0');");
         }//End of if statement to initially populate the table HumanUsers
 
-      //  btnShelterIn.setOnClickListener(new View.OnClickListener() {
-           // @Override
-           // public void onClick(View v) {
-             //   intent = new Intent(MainActivity.this, ShelterUserSignInActivity.class);
-         //   }//End of method onClick
-        //});//End of btnViewList.setOnClickListener
 
-        btnShelterUp.setOnClickListener(new View.OnClickListener() {
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                // intent = new Intent(MainActivity.this, ShelterUserSignUpActivity.class);
                 startActivity(intent);
             }//End of method onClick
-        });//End of btnShelterUp.setOnClickListener
+        });//End of btnSignIn.setOnClickListener
 
-        btnHuIn.setOnClickListener(new View.OnClickListener() {
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            // intent = new Intent(MainActivity.this, HumanUserSignInActivity.class);
-                startActivity(intent);
-            }//End of method onClick
-        });//End of btnHuIn.setOnClickListener
+                switch (userChoice) {
+                    case 1:
+                        intent = new Intent(MainActivity.this, HumanUserSignUpActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        //do something for shelter registration
+                        break;
+                    default:
+                        Toast.makeText(getApplicationContext(), "Please select a User Type to continue ", Toast.LENGTH_LONG).show();
+                        break;
+                }//End of switch to decide with sign up activity to go to
 
-        btnHuUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(MainActivity.this, HumanUserSignUpActivity.class);
-                startActivity(intent);
             }//End of method onClick
-        });//End of btnHuUp.setOnClickListener
-
+        });//End of btnSignUp.setOnClickListener
     }//End of method onCreate
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        // On selecting a spinner item
+        String item = parent.getItemAtPosition(position).toString();
+
+        switch (position)   {
+            case 1:
+                userChoice = 1;
+                break;
+            case 2:
+                userChoice = 2;
+                break;
+            default:
+                userChoice = 0;
+                Toast.makeText(parent.getContext(), "Please select a User Type to continue ", Toast.LENGTH_LONG).show();
+                break;
+        }//End of switch statement that decides wich user type is selected
+    }//End of onItemSelected for the spinner
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO Auto-generated method stub
+    }//End of onNothingSelected for the spinner
 }//End of MainActivity
