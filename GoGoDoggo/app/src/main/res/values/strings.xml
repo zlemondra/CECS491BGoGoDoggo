@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GoGoDoggo</string>
+    <string name="create_shelter_account">CREATE SHELTER ACCOUNT</string>
+    <string name="enter_name_of_shelter">Enter Name of Shelter.</string>
+    <string name="enter_address_of_the_shelter">Enter address of the shelter.</string>
+    <string name="enter_email_address_of_the_shelter">Enter email address of the shelter.</string>
+    <string name="create_account">Create Account</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="enter_phone_number_of_the_shelter">Enter phone number of the shelter.</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="enter_a_password">Enter a password.</string>
+    <string name="password">Password</string>
+</resources>

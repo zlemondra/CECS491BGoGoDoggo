@@ -7,9 +7,10 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/AppNametv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go Go Doggo"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -17,26 +18,55 @@
         app:layout_constraintVertical_bias="0.157" />
 
     <Button
-        android:id="@+id/ShelterSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:background="@color/colorPrimaryDark"
-        android:onClick="ShelterSignOnButton.java"
-        android:text="Shelter SignUp"
-        android:textColor="@color/colorPrimary"
+        android:id="@+id/btn_sign_in"
+        android:layout_width="231dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="292dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="270dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/HumanSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:text="Human SignUp"
-        android:textColor="@color/colorPrimary"
+        android:id="@+id/btn_sign_up"
+        android:layout_width="231dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="270dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="137dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/new_logo" />
+
+    <Spinner
+        android:id="@+id/spinner_user_type"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
 </android.support.constraint.ConstraintLayout>

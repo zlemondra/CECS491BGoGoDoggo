@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\mainscreen",
+    "\\mainscreen\\app",
+    "\\mainscreen\\app\\src",
+    "\\mainscreen\\app\\src\\main",
+    "\\mainscreen\\app\\src\\main\\java",
+    "\\mainscreen\\app\\src\\main\\java\\com",
+    "\\mainscreen\\app\\src\\main\\java\\com\\example",
+    "\\mainscreen\\app\\src\\main\\java\\com\\example\\mainscreen"
+  ],
+  "SelectedNode": "\\mainscreen\\app\\src\\main\\java\\com\\example\\mainscreen\\HumanUserSignUpActivity.java",
+  "PreviewInSolutionExplorer": true
+}

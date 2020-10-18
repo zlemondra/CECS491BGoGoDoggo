@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Main Screen</string>
+    <string name="app_name">GoGoDoggo</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="password">Password</string>
+    <string name="re_type_password">Re-Type Password</string>
+    <string name="email">E-Mail Address</string>
+    <string name="submit">Submit</string>
+    <string name="title_activity_quiz">quiz</string>
+    <string name="huActivity">Human User Sign Up Activity</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
