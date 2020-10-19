@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Cursor cursor;
     Button btnSignIn, btnSignUp;
     Spinner spinnerUserType;
-    List<String> userTypeSelection = new ArrayList<String>();
-    int userChoic = 0;
+    int userChoice = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +33,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         btnSignIn = (Button) findViewById(R.id.btn_sign_in);
         btnSignUp = (Button) findViewById(R.id.btn_sign_up);
         spinnerUserType = (Spinner) findViewById(R.id.spinner_user_type);
-        userTypeSelection.add("Select a User Type");
-        userTypeSelection.add("Human User");
-        userTypeSelection.add("Shelter");
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, userTypeSelection); //For the spinner
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); //For the spinner
-        spinnerUserType.setAdapter(dataAdapter);    //For the spinner
+        spinnerUserType.setOnItemSelectedListener(this);
+        List<String> userTypes = new ArrayList<String>();
+        userTypes.add("Please select a user type");
+        userTypes.add("Human User");
+        userTypes.add("Shelter");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, userTypes);    //for the spinner
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); //for the spinner
+        spinnerUserType.setAdapter(dataAdapter);    //for the spinner
+
 
         //Create a database to hold the tables
         SQLiteDatabase ggdDatabase = openOrCreateDatabase("ggd_Database", MODE_PRIVATE, null);
@@ -51,35 +53,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             ggdDatabase.execSQL("INSERT INTO HumanUsers VALUES('admin', 'admin', 'amulkey21@yahoo.com', 'admin', '0');");
         }//End of if statement to initially populate the table HumanUsers
 
-        // Spinner click listener
-        spinnerUserType.setOnItemSelectedListener(MainActivity.this);
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //intent = new Intent(MainActivity.this, HumanUserSignUpActivity.class);
-                //startActivity(intent);
+               // intent = new Intent(MainActivity.this, ShelterUserSignUpActivity.class);
+                startActivity(intent);
             }//End of method onClick
-        });//End of btnHuIn.setOnClickListener
+        });//End of btnSignIn.setOnClickListener
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                switch (userChoic)  {
-                    case 1: //Navigate to HumanUserSignUpActivity to register a human user
+                switch (userChoice) {
+                    case 1:
                         intent = new Intent(MainActivity.this, HumanUserSignUpActivity.class);
                         startActivity(intent);
                         break;
-                    case 2: //Navigate to register a shelter
-                        Toast.makeText(getApplicationContext(), "Please select a user type to continue", Toast.LENGTH_LONG).show();
+                    case 2:
+                        //do something for shelter registration
                         break;
-                    default:    //Anything else
-                }//End of switch statement to decide what page to go to
+                    default:
+                        Toast.makeText(getApplicationContext(), "Please select a User Type to continue ", Toast.LENGTH_LONG).show();
+                        break;
+                }//End of switch to decide with sign up activity to go to
+
             }//End of method onClick
         });//End of btnSignUp.setOnClickListener
-
-
     }//End of method onCreate
 
     @Override
@@ -89,20 +89,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         switch (position)   {
             case 1:
-                userChoic = 1;
+                userChoice = 1;
                 break;
             case 2:
-                userChoic = 2;
+                userChoice = 2;
                 break;
             default:
-                Toast.makeText(parent.getContext(), "Please select a user type to continue", Toast.LENGTH_LONG).show();
-                userChoic = 0;
-        }//End of switch statement
-    }//End of onItemSelected
+                userChoice = 0;
+                Toast.makeText(parent.getContext(), "Please select a User Type to continue ", Toast.LENGTH_LONG).show();
+                break;
+        }//End of switch statement that decides wich user type is selected
+    }//End of onItemSelected for the spinner
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
-    }//End of onNothingSelected
+    }//End of onNothingSelected for the spinner
 }//End of MainActivity
-
-
-
