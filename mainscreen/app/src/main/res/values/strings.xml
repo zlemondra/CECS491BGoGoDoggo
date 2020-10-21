@@ -11,9 +11,11 @@
     <string name="title_activity_quiz">quiz</string>
     <string name="hu_activity">Human User Activity</string>
     <string name="age">Age</string>
-    <string name="temperament">Temperament</string>
+    <string name="gender">Gender</string>
+    <string name="color">Color</string>
     <string name="breed">Breed</string>
     <string name="submitdogprofile">submitdogprofile</string>
     <string name="dog_bio">Bio</string>
     <string name="dog_name">Name</string>
+    <string name="size">Size</string>
 </resources>
