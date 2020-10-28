@@ -9,5 +9,5 @@ public class ShelterWelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shelter_welcome);
-    }
-}
+    }//End of the method onCreate
+}//End of the class ShelterWelcomeActivity

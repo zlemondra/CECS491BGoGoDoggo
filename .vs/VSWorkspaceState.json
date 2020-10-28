@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\mainscreen",
-    "\\mainscreen\\app",
-    "\\mainscreen\\app\\src",
-    "\\mainscreen\\app\\src\\main",
-    "\\mainscreen\\app\\src\\main\\java",
-    "\\mainscreen\\app\\src\\main\\java\\com",
-    "\\mainscreen\\app\\src\\main\\java\\com\\example",
-    "\\mainscreen\\app\\src\\main\\res",
-    "\\mainscreen\\app\\src\\main\\res\\values"
+    ""
   ],
-  "SelectedNode": "\\mainscreen\\app\\build.gradle",
+  "SelectedNode": "\\mainscreen_2",
   "PreviewInSolutionExplorer": true
 }

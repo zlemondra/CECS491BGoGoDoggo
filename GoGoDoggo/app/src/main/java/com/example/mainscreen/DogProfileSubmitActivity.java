@@ -1,13 +1,12 @@
+/*
 package com.example.mainscreen;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class DogProfileSubmitActivity extends AppCompatActivity {
 
@@ -32,16 +31,9 @@ public class DogProfileSubmitActivity extends AppCompatActivity {
         etsize = findViewById(R.id.et_dog_size);
         etbio = findViewById(R.id.et_dog_bio);
 
-      btn_submit_dog_profile.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-              if (etdogname==null) {
-                  Toast.makeText(getApplicationContext(), "Please enter a name.", Toast.LENGTH_SHORT).show();
-              }
-            }
-      });
-
     }
 }
 
 
+
+ */
