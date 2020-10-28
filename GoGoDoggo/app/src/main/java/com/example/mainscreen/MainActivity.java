@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -21,8 +22,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Bundle bundle;
     Cursor cursor;
     Button btnSignIn, btnSignUp;
+    EditText etEmail, etPassword;
     Spinner spinnerUserType;
     int userChoice = 0;
+    String email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         btnSignIn = (Button) findViewById(R.id.btn_sign_in);
         btnSignUp = (Button) findViewById(R.id.btn_sign_up);
         spinnerUserType = (Spinner) findViewById(R.id.spinner_user_type);
+        etEmail = (EditText) findViewById(R.id.et_email);
+        etPassword = (EditText) findViewById(R.id.et_password);
         spinnerUserType.setOnItemSelectedListener(this);
         List<String> userTypes = new ArrayList<String>();
         userTypes.add("Please select a user type");
@@ -57,8 +62,47 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // intent = new Intent(MainActivity.this, ShelterUserSignUpActivity.class);
-                startActivity(intent);
+                if (userChoice == 1)    {
+                    intent = new Intent(MainActivity.this, HumanUserWelcomeActivity.class);
+                    startActivity(intent);
+                }
+                else if (userChoice == 2)   {
+                    intent = new Intent(MainActivity.this, ShelterWelcomeActivity.class);
+                    startActivity(intent);
+                }
+
+                /*
+                email = etEmail.getText().toString().trim();
+                password = etPassword.getText().toString().trim();
+
+                if (!email.equals("") && !password.equals(""))  {
+                    switch (userChoice) {
+                        case 1:
+                            //Add SQL query here
+                            if (true)   {//Replace true with a check if the email / passwerd combination is in the table Users
+                                intent = new Intent(MainActivity.this, HumanUserWelcomeActivity.class);
+                                startActivity(intent);
+                            } else  {
+                                Toast.makeText(getApplicationContext(), "Email / Password not found", Toast.LENGTH_LONG).show();
+                            }//End of if-else email and password are in the table
+                            break;
+                        case 2:
+                            //Add SQL query here
+                            if (true)   {//Replace true with a check if the email / passwerd combination is in the table Shelters
+                                intent = new Intent(MainActivity.this, ShelterWelcomeActivity.class);
+                                startActivity(intent);
+                            } else  {
+                                Toast.makeText(getApplicationContext(), "Email / Password not found", Toast.LENGTH_LONG).show();
+                            }//End of if-else email and password are in the table
+                            break;
+                        default:
+                            Toast.makeText(getApplicationContext(), "Please select a User Type to continue ", Toast.LENGTH_LONG).show();
+                            break;
+                    }//End of switch to decide with sign up activity to go to
+                }else   {
+                    Toast.makeText(getApplicationContext(), "All fields are required to continue ", Toast.LENGTH_LONG).show();
+                }//End of if/else to check that all fields have values
+                 */
             }//End of method onClick
         });//End of btnSignIn.setOnClickListener
 
