@@ -1,4 +1,6 @@
+
 /*
+
 package com.example.mainscreen;
 
 import android.database.Cursor;
@@ -48,3 +50,4 @@ public class DogProfileSubmitActivity extends AppCompatActivity {
 
 
  */
+
