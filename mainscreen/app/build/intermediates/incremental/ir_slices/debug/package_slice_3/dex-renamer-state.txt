@@ -1,0 +1,4 @@
+#Tue Oct 20 19:32:22 PDT 2020
+base.0=C\:\\Users\\zledr\\OneDrive\\Documents\\GitHub\\CECS491BGoGoDoggo\\mainscreen\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
+path.0=classes.dex
+renamed.0=classes.dex
